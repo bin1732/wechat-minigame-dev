@@ -1,0 +1,28 @@
+{
+  "name": "wechat-minigame-dev",
+  "version": "1.0.2",
+  "private": true,
+  "description": "微信小游戏开发专家 — 从创意到运营的全链路顾问 Skill",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "test": "node test/smoke-test.mjs",
+    "compliance-scan": "node scripts/compliance-scan.mjs",
+    "readiness-check": "node scripts/readiness-check.mjs",
+    "package-analyzer": "node scripts/package-analyzer.mjs",
+    "perf-profiler": "node scripts/perf-profiler.mjs",
+    "asset-check": "node scripts/asset-check.mjs",
+    "knowledge-filter": "node scripts/knowledge-filter.mjs",
+    "sop-timeliness-check": "node scripts/sop-timeliness-check.mjs",
+    "verify-devtool": "node scripts/verify-devtool.mjs",
+    "run-game": "node scripts/run-game.mjs",
+    "get-logs": "node scripts/get-logs.mjs",
+    "screenshot": "node scripts/screenshot.mjs",
+    "real-device": "node scripts/real-device.mjs",
+    "publish": "node scripts/publish.mjs"
+  },
+  "keywords": ["wechat", "mini-game", "skill", "compliance", "game-development"],
+  "license": "MIT"
+}
