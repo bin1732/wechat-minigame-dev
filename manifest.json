@@ -1,0 +1,92 @@
+{
+  "name": "微信小游戏开发专家",
+  "version": "1.0.2",
+  "type": "skill",
+  "description": "从创意到运营的全链路微信小游戏开发专家，集成知识库+执行工具+反幻觉机制",
+  "aiContentNotice": "本文档由人工智能辅助生成，依据《人工智能生成合成内容标识办法》（2025年9月1日施行）添加显式标识。内容仅供参考，请以微信官方平台现行规则为准。",
+  "dataAuthenticity": {
+    "commitment": "所有数据均为参考区间，标注「需实时验证」的字段必须核实后使用",
+    "verificationCycle": "每季度全量核实，月度增量刷新",
+    "dataSources": [
+      "微信公开课PRO",
+      "微信小游戏数据助手",
+      "QuestMobile",
+      "DataEye-EDX",
+      "点点数据",
+      "七麦数据"
+    ],
+    "expiryPolicy": "超过90天未验证的数值必须加「需实时验证」标记"
+  },
+  "capabilities": {
+    "knowledge": [
+      "市场分析/品类推荐",
+      "合规红线/资质办理",
+      "游戏设计/数值平衡",
+      "技术开发/性能优化",
+      "数据分析/增长运营",
+      "质量保障/审核流程",
+      "失败诊断/危机处理"
+    ],
+    "execution": [
+      "环境验证(verify-devtool.mjs)",
+      "运行预览(run-game.mjs)",
+      "获取日志(get-logs.mjs, automator实时/文件降级)",
+      "截图(screenshot.mjs, automator真截图/引导降级)",
+      "真机预览(real-device.mjs)",
+      "上传发布(publish.mjs)",
+      "就绪度自检(readiness-check.mjs)",
+      "合规扫描(compliance-scan.mjs, 注释剥离降误报)",
+      "包体分析(package-analyzer.mjs, 主包/分包/总包检测)",
+      "性能打点(perf-profiler.mjs, 兼容自定义循环)",
+      "素材检查(asset-check.mjs)",
+      "知识库过滤(knowledge-filter.mjs, 按阶段/主题/角色精准加载)",
+      "SOP时效巡检(sop-timeliness-check.mjs, 8份SOP核实周期扫描)"
+    ],
+    "antiHallucination": [
+      "专家团审查防编造",
+      "数据引用防过时",
+      "合规建议防错误",
+      "执行层防误用",
+      "快速路径防跳过"
+    ],
+    "learningAndMemory": [
+      "用户画像持久化(memory wechat-minigame user-profile)",
+      "项目状态追踪(memory wechat-minigame project-state)",
+      "渐进式用户画像采集",
+      "自进化协议(12个进化触发器)",
+      "SOP时效巡检(8份SOP核实周期)"
+    ]
+  },
+  "scripts": {
+    "verify-devtool": "scripts/verify-devtool.mjs",
+    "run-game": "scripts/run-game.mjs",
+    "get-logs": "scripts/get-logs.mjs",
+    "screenshot": "scripts/screenshot.mjs",
+    "real-device": "scripts/real-device.mjs",
+    "publish": "scripts/publish.mjs",
+    "readiness-check": "scripts/readiness-check.mjs",
+    "compliance-scan": "scripts/compliance-scan.mjs",
+    "package-analyzer": "scripts/package-analyzer.mjs",
+    "perf-profiler": "scripts/perf-profiler.mjs",
+    "asset-check": "scripts/asset-check.mjs",
+    "knowledge-filter": "scripts/knowledge-filter.mjs",
+    "sop-timeliness-check": "scripts/sop-timeliness-check.mjs"
+  },
+  "libs": {
+    "devtool-cli": "scripts/lib/devtool-cli.mjs",
+    "project-detector": "scripts/lib/project-detector.mjs",
+    "output-formatter": "scripts/lib/output-formatter.mjs",
+    "automator": "scripts/lib/automator.mjs"
+  },
+  "engine": {
+    "decision-trees": "engine/decision-trees.md",
+    "expert-panel": "engine/expert-panel.md",
+    "evolution-protocol": "engine/evolution-protocol.md",
+    "anti-hallucination": "engine/anti-hallucination.md",
+    "execution-protocol": "engine/execution-protocol.md"
+  },
+  "requirements": {
+    "node": ">=18.0.0",
+    "wechat-devtool": "可选（执行层需要，知识层不需要）"
+  }
+}
